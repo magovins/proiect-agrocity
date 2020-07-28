@@ -1,7 +1,7 @@
 const userData = [{
          "id": 1,
          "name": "Alina Neculai",
-         "description": "Buna, sunt Alina, am 25 de ani, sunt din Constanta si in present studiez marketing in Anglia. Am fost mereu atrasa de tehnologie si in special de web development dar nu am avut niciodata curajul sa ma apuc. Asa ca in ultimele 3 luni m-am hotarat sa invat HTML, CSS si putin JavaScript, si de atunci doar cu asta imi ocup timpul. Imi plac masinile (as vrea o Tesla:car:) cititul (in special carti de dezvoltare personala) si gaming-ul.",
+         "description": "Buna, sunt Alina, am 25 de ani, sunt din Constanta si in prezent studiez marketing in Anglia. Am fost mereu atrasa de tehnologie si in special de web development dar nu am avut niciodata curajul sa ma apuc. Asa ca in ultimele 3 luni m-am hotarat sa invat HTML, CSS si putin JavaScript, si de atunci doar cu asta imi ocup timpul. Imi plac masinile (as vrea o Tesla:car:) cititul (in special carti de dezvoltare personala) si gaming-ul.",
          "avatar": "resources/images/Alina.jpg",
          "skillMeter":{
             "skillM1": 6,
