@@ -10,10 +10,10 @@ let userMainInfos = document.getElementById("ModalTest");
 let arr = [];
 const renderModalBox = () => {
 
-    let showModalBox = arr.reduce((acc, curentValue) => {
-        return (
-            acc +
-            `
+  let showModalBox = arr.reduce((acc, curentValue) => {
+    return (
+      acc +
+      `
             <span class="close" id="close-modal-box-btn">&times;</span>
 
             <div class="flex flex-wrap">
@@ -234,10 +234,7 @@ const renderModalBox = () => {
               ${curentValue.skils.hardSkils.skil8}
             </div>
           </div>
-
-
-
-                  </div>
+                 </div>
                 </div>
               </div>
             </div>
@@ -248,90 +245,89 @@ const renderModalBox = () => {
               <a href="${curentValue.links.facebook}" class="hover:text-red-800"><i class="fab fa-facebook icon-2x"></i></a>
             </div>
             `
-        );
-    }, " ");
-    userMainInfos.innerHTML = showModalBox;
+    );
+  }, " ");
+  userMainInfos.innerHTML = showModalBox;
 }
 
 
 
 
 const checkId = (id) => {
-    userData.forEach(el => {
-        if (id === el.id) {
-            arr = [el];
-        }
-    });
+  userData.forEach(el => {
+    if (id === el.id) {
+      arr = [el];
+    }
+  });
 }
 
 function toogleBackdrop(event) {
-    let userTargetId = parseInt(event.currentTarget.getAttribute("data-userId"));
-    checkId(userTargetId);
-    backdrop.classList.toggle("hidden");
-    backdrop.classList.toggle("flex");
-    renderModalBox();
-    closebtn();
+  let userTargetId = parseInt(event.currentTarget.getAttribute("data-userId"));
+  checkId(userTargetId);
+  backdrop.classList.toggle("hidden");
+  backdrop.classList.toggle("flex");
+  renderModalBox();
+  closebtn();
 
-    addEventListener("click", closebtn);
+  addEventListener("click", closebtn);
 }
 
 const showModal = () => {
-    backdrop.classList.toggle("hidden");
-    backdrop.classList.toggle("flex");
+  backdrop.classList.toggle("hidden");
+  backdrop.classList.toggle("flex");
 }
 
 window.addEventListener("load", getBtns);
 
 window.onclick = event => {
-    if (event.target === backdrop) {
-        showModal();
-    }
+  if (event.target === backdrop) {
+    showModal();
+  }
 }
+
 function getBtns() {
-    const employeeBtn = document.getElementsByClassName("userId");
-    for (let btn of employeeBtn) {
-        btn.addEventListener('click', toogleBackdrop);
-    }
+  const employeeBtn = document.getElementsByClassName("userId");
+  for (let btn of employeeBtn) {
+    btn.addEventListener('click', toogleBackdrop);
+  }
 }
 
 function closebtn() {
-    document.getElementById("close-modal-box-btn").addEventListener("click", showModal);
-    document.getElementById("softSkilsBtn").addEventListener("click", showHardSkils);
-    document.getElementById("hardSkilsBtn").addEventListener("click", showSoftSkils);
+  document.getElementById("close-modal-box-btn").addEventListener("click", showModal);
+  document.getElementById("softSkilsBtn").addEventListener("click", showHardSkils);
+  document.getElementById("hardSkilsBtn").addEventListener("click", showSoftSkils);
 }
 
 function showHardSkils() {
-    let hardSkilsUser = document.getElementById("hardSkils")
-    let softSkilsUser = document.getElementById("softSkils");
+  let hardSkilsUser = document.getElementById("hardSkils")
+  let softSkilsUser = document.getElementById("softSkils");
 
-    hardSkilsUser.style.display = "none";
-    softSkilsUser.style.display = "block";
+  hardSkilsUser.style.display = "none";
+  softSkilsUser.style.display = "block";
 }
 
 function showSoftSkils() {
-    let hardSkilsUser = document.getElementById("hardSkils")
-    let softSkilsUser = document.getElementById("softSkils");
+  let hardSkilsUser = document.getElementById("hardSkils")
+  let softSkilsUser = document.getElementById("softSkils");
 
-    hardSkilsUser.style.display = "block";
-    softSkilsUser.style.display = "none";
+  hardSkilsUser.style.display = "block";
+  softSkilsUser.style.display = "none";
 }
 
 
 
 //toggle the menu
-document.getElementById('nav-toggle').onclick = function(){
+document.getElementById('nav-toggle').onclick = function () {
   document.getElementById("nav-content").classList.toggle("hidden");
 }
 
-$(document).on("scroll", function(){
+$(document).on("scroll", function () {
 
-    if($(document).scrollTop() > 100){
-        $("nav").addClass("shrink");
-    }else{
-        $("nav").removeClass("shrink");
-    }
+  if ($(document).scrollTop() > 100) {
+    $("nav").addClass("shrink");
+  } else {
+    $("nav").removeClass("shrink");
+  }
 
-    //$(document).scrollTop() > 100 ? $("nav").addClass("shrink") : $("nav").removeClass("shrink");
+  //$(document).scrollTop() > 100 ? $("nav").addClass("shrink") : $("nav").removeClass("shrink");
 });
-
-
