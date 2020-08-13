@@ -166,15 +166,20 @@ body {
   }
 }
 
-.asidebar {
-  width: 100vw;
-  border: 1px solid blueviolet;
+.asidebar-user-infos {
+  width: 100%;
 }
 
-.asidebar .users-img img {
+.asidebar-user-infos .users-img img {
+  display: block;
+  margin: 10px auto;
   width: 50%;
   height: 50%;
-  margin: 10px;
+}
+
+.asidebar-user-infos .user-description {
+  text-align: center;
+  margin: 20px;
 }
 
 @media screen and (min-width: 600px) {

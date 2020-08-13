@@ -1,21 +1,18 @@
-.asidebar {
-  width: 100vw;
-  border: 1px solid blueviolet;
+.asidebar-user-infos {
+  width: 100%;
   .users-img {
-    // position: relative;
     img {
-      // position: absolute;
-      // top: 50%;
-      // left: 50%;
-      // transform: translate(-50%,-50%);
+      display: block;
+      margin: 10px auto;
       width: 50%;
       height: 50%;
-      margin: 10px;
     }
   }
+  .user-description {
+    text-align: center;
+    margin: 20px;
+  }
 }
-
-
 @media screen and (min-width: 600px) {
   .asidebar {
     width: 30%;
