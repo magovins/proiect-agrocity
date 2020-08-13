@@ -1,0 +1,23 @@
+.asidebar {
+  width: 100vw;
+  border: 1px solid blueviolet;
+  .users-img {
+    // position: relative;
+    img {
+      // position: absolute;
+      // top: 50%;
+      // left: 50%;
+      // transform: translate(-50%,-50%);
+      width: 50%;
+      height: 50%;
+      margin: 10px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  .asidebar {
+    width: 30%;
+  }
+}
