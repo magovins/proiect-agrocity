@@ -317,7 +317,10 @@ function showSoftSkils() {
 
 
 //toggle the menu
-document.getElementById('nav-toggle').onclick = function () {
+  document.getElementById('nav-toggle').onclick = function () {
+  document.getElementById("nav-content").classList.toggle("hidden");
+}
+  document.getElementById("nav-content").onclick = function myFunction() {
   document.getElementById("nav-content").classList.toggle("hidden");
 }
 
@@ -334,9 +337,4 @@ $(document).on("scroll", function () {
   //$(document).scrollTop() > 100 ? $("nav").addClass("shrink") : $("nav").removeClass("shrink");
 });
 
-document.getElementById("nav-toggle").onclick = function myFunction() {
-  document.getElementById("nav-content").classList.toggle("hidden");
-}
-document.getElementById("nav-content").onclick = function myFunction() {
-  document.getElementById("nav-content").classList.toggle("hidden");
-}
+
